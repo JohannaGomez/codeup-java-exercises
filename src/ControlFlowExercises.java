@@ -40,6 +40,7 @@ public class ControlFlowExercises {
 
         // =============== condition to start the for loop:
         if(start < end){
+            // for(starting number: condition to enter the loop; incrementer)
             for (int i = start; i <= end; i += incrementer) {
                 System.out.println(i);
             }
@@ -48,7 +49,7 @@ public class ControlFlowExercises {
                 System.out.println(i);
             }
         }
-        // for(starting number: condition to enter the loop; incrementer)
+
 
 
 
