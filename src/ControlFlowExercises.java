@@ -175,38 +175,41 @@ public class ControlFlowExercises {
         String choice = "y";
 //
         do {
+            do {
+                // run the code inside the do body at least once
+                System.out.print("enter your numerical grade than 0: ");
+                yourNumericalGrade = scan.nextInt();
+            } while (yourNumericalGrade <= 0);
 
-        } while (choice == "y");
-
-        do {
-            // run the code inside the do body at least once
-            System.out.print("enter your numerical grade than 0: ");
-            yourNumericalGrade = scan.nextInt();
-        } while (yourNumericalGrade <= 0);
-
-
-
-        if (yourNumericalGrade >= 88 && yourNumericalGrade <=100){
-            System.out.println("your Grade is: A! Congratulations!");
-        } else {
-            if (yourNumericalGrade >= 80 && yourNumericalGrade <= 87) {
-                System.out.println("Your Grade is: B!");
+            if (yourNumericalGrade >= 88 && yourNumericalGrade <=100){
+                System.out.println("your Grade is: A! Congratulations!");
             } else {
-                if (yourNumericalGrade >= 67 && yourNumericalGrade <= 79) {
-                    System.out.println("Your Grade is: C!");
+                if (yourNumericalGrade >= 80 && yourNumericalGrade <= 87) {
+                    System.out.println("Your Grade is: B!");
                 } else {
-                    if (yourNumericalGrade >= 60 && yourNumericalGrade <= 66) {
-                        System.out.println("Your Grade is: d!");
+                    if (yourNumericalGrade >= 67 && yourNumericalGrade <= 79) {
+                        System.out.println("Your Grade is: C!");
                     } else {
-                        System.out.println("Your Grade is: F, look for another school");
+                        if (yourNumericalGrade >= 60 && yourNumericalGrade <= 66) {
+                            System.out.println("Your Grade is: d!");
+                        } else {
+                            System.out.println("Your Grade is: F, look for another school");
+                        }
                     }
                 }
-            }
 
-        }
-        System.out.print("Continue? (y/n): ");
-        choice = scan.next();
-        System.out.println();
+            }
+            System.out.print("Continue? (y/n): ");
+            choice = scan.next();
+            System.out.println();
+
+        } while (choice.equalsIgnoreCase("y"));
+
+
+
+
+
+
 
 
 
