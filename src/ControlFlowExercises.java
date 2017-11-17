@@ -140,21 +140,21 @@ public class ControlFlowExercises {
 //        Ask if the user wants to continue.
 //        Assume that the user will enter valid data.
 //        Only continue if the user agrees to.
-        System.out.print("enter an integer: ");
-        int userInteger = scan.nextInt();
-        String header = "Number |" + "Squared   |" + "Cubed " + "\n"
-                    +   "-------|" + "----------|" + "------";
-        System.out.println(header);
-        int square = 0;
-        int cube = 0;
-        String row = "";
-        for (int i = 1; i <= userInteger; i = i + 1) {
-            square = i * i;
-            cube = i * i * i;
-
-            row = i + "      |" + square + "         |" + cube;
-            System.out.println(row);
-        }
+//        System.out.print("enter an integer: ");
+//        int userInteger = scan.nextInt();
+//        String header = "Number |" + "Squared   |" + "Cubed " + "\n"
+//                    +   "-------|" + "----------|" + "------";
+//        System.out.println(header);
+//        int square = 0;
+//        int cube = 0;
+//        String row = "";
+//        for (int i = 1; i <= userInteger; i = i + 1) {
+//            square = i * i;
+//            cube = i * i * i;
+//
+//            row = i + "      |" + square + "         |" + cube;
+//            System.out.println(row);
+//        }
 
 //        Convert given number grades into letter grades.
 //
@@ -170,7 +170,44 @@ public class ControlFlowExercises {
 //        C : 79 - 67
 //        D : 66 - 60
 //        F : 59 - 0
-        System.out.println("enteer");
+
+        int yourNumericalGrade;
+        String choice = "y";
+//
+        do {
+
+        } while (choice == "y");
+
+        do {
+            // run the code inside the do body at least once
+            System.out.print("enter your numerical grade than 0: ");
+            yourNumericalGrade = scan.nextInt();
+        } while (yourNumericalGrade <= 0);
+
+
+
+        if (yourNumericalGrade >= 88 && yourNumericalGrade <=100){
+            System.out.println("your Grade is: A! Congratulations!");
+        } else {
+            if (yourNumericalGrade >= 80 && yourNumericalGrade <= 87) {
+                System.out.println("Your Grade is: B!");
+            } else {
+                if (yourNumericalGrade >= 67 && yourNumericalGrade <= 79) {
+                    System.out.println("Your Grade is: C!");
+                } else {
+                    if (yourNumericalGrade >= 60 && yourNumericalGrade <= 66) {
+                        System.out.println("Your Grade is: d!");
+                    } else {
+                        System.out.println("Your Grade is: F, look for another school");
+                    }
+                }
+            }
+
+        }
+        System.out.print("Continue? (y/n): ");
+        choice = scan.next();
+        System.out.println();
+
 
 
 //        int x = 2;
