@@ -124,20 +124,9 @@ public class StringExercise {
 
 //        I can do backslashes \, double backslashes \\,
 //        and the amazing triple backslash \\\!
-//        String message = "I can do backslashes \\, double backslashes \\\\ \nand the amazing triple backslash \\\\\\";
-//        System.out.println(message);
+        String message = "I can do backslashes \\, double backslashes \\\\ \nand the amazing triple backslash \\\\\\";
+        System.out.println(message);
 
-
-//        2.-  ========================================Create a class Bob for the following exercise with a main method.
-//        Bob is a lackadaisical teenager. In conversation, his responses are very limited.
-//
-//        Bob answers 'Sure.' if you ask him a question.
-//
-//        He answers 'Whoa, chill out!' if you yell at him.
-//
-//        He says 'Fine. Be that way!' if you address him without actually saying anything.
-//
-//        He answers 'Whatever.' to anything else.
 
 
     }
