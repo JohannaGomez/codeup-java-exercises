@@ -145,29 +145,42 @@ public class ControlFlowExercises {
 //        Ask if the user wants to continue.
 //        Assume that the user will enter valid data.
 //        Only continue if the user agrees to.
+//
+//        String option = "y";
+//        do {
+//            System.out.print("enter an integer: ");
+//            int userInteger = scan.nextInt();
+//            String header = "Number |" + "Squared   |" + "Cubed " + "\n"
+//                        +   "-------|" + "----------|" + "------";
+//            System.out.println(header);
+//            int square = 0;
+//            int cube = 0;
+//            String row = "";
+//            for (int i = 1; i <= userInteger; i = i + 1) {
+//                square = i * i;
+//                cube = i * i * i;
+//                row = i + "      |" + square + "         |" + cube;
+//                System.out.println(row);
+//            }
+//            System.out.print("Continue? (y/n): ");
+//            option = scan.next();
+//            System.out.println();
+//        } while (option.equalsIgnoreCase("y"));
 
-        String option = "y";
-        do {
-            System.out.print("enter an integer: ");
-            int userInteger = scan.nextInt();
-            String header = "Number |" + "Squared   |" + "Cubed " + "\n"
-                        +   "-------|" + "----------|" + "------";
-            System.out.println(header);
-            int square = 0;
-            int cube = 0;
-            String row = "";
-            for (int i = 1; i <= userInteger; i = i + 1) {
-                square = i * i;
-                cube = i * i * i;
+//        Justin's solution:
+        System.out.print("enter an integer: ");
+        int userInter = scan.nextInt();
+        String header = "Number |" + "Squared   |" + "Cubed " + "\n"
+                +   "-------|" + "----------|" + "------";
+        System.out.println(header);
+        for (int i = 1; i <= userInter; i = i + 1) {
+            String output = "";
+            output += String.format("%-7d", i);
+            output += String.format("|%-10d", i * i);
+            output += String.format("|%d", i * i * i);
+            System.out.println(output);
 
-                row = i + "      |" + square + "         |" + cube;
-                System.out.println(row);
-            }
-            System.out.print("Continue? (y/n): ");
-            option = scan.next();
-            System.out.println();
-        } while (option.equalsIgnoreCase("y"));
-
+        }
 //        ======================  Convert given number grades into letter grades.  ==================================
 //
 //        Prompt the user for a numerical grade from 0 to 100.
