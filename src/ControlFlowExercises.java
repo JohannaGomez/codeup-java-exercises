@@ -62,23 +62,23 @@ public class ControlFlowExercises {
 //
 //        5 6 7 8 9 10 11 12 13 14 15
 
-        int i = 5;
-        while (i <=15) {
-            System.out.print(i);
-            System.out.print(" ");
-            i = i + 1;
-        };
+//        int i = 5;
+//        while (i <=15) {
+//            System.out.print(i);
+//            System.out.print(" ");
+//            i = i + 1;
+//        };
 
 //        ================================   Do While and For Loop ============================================
 //
 //        Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
         // Do While:
-        int x = 0;
-        do {
-            x = x + 2;
-            System.out.println(x);
-
-        } while(x <100);
+//        int x = 0;
+//        do {
+//            x = x + 2;
+//            System.out.println(x);
+//
+//        } while(x <100);
 
         // For loop:
 //        for (int x = 0; x <= 100; x = x + 2) {
@@ -100,21 +100,22 @@ public class ControlFlowExercises {
 //            System.out.println(x);
 //        }
 
-//        Create a do-while loop that starts at 2, and displays the number squared on each line
-//        while the number is less than 1,000,000.
+//       ======= Create a do-while loop that starts at 2, and displays the number squared on each line ==============
+//       ======= while the number is less than 1,000,000.
         // Do while:
 //        long y = 2;
 //        do {
 //            System.out.println(y);
 //            y = y * y;
-//        } while (y < 65537);
+//        } while (y < 1000000L);
+
         // For loop:
-//        for (long y = 2; y < 65537; y = y * y) {
+//        for (long y = 2; y < 1000000L; y = y * y) {
 //            System.out.println(y);
 //        }
 
 
-//        Fizzbuzz
+//        ==================================  Fizzbuzz  ========================================================
 //
 //        Write a program that prints the numbers from 1 to 100.
 //        For multiples of three print “Fizz” instead of the number
@@ -137,30 +138,37 @@ public class ControlFlowExercises {
 //            System.out.println(x);
 //        }
 
-//        Display a table of powers.
+//        ================================= Display a table of powers. ==============================================
 //
 //        Prompt the user to enter an integer.
 //        Display a table of squares and cubes from 1 to the value entered.
 //        Ask if the user wants to continue.
 //        Assume that the user will enter valid data.
 //        Only continue if the user agrees to.
-//        System.out.print("enter an integer: ");
-//        int userInteger = scan.nextInt();
-//        String header = "Number |" + "Squared   |" + "Cubed " + "\n"
-//                    +   "-------|" + "----------|" + "------";
-//        System.out.println(header);
-//        int square = 0;
-//        int cube = 0;
-//        String row = "";
-//        for (int i = 1; i <= userInteger; i = i + 1) {
-//            square = i * i;
-//            cube = i * i * i;
-//
-//            row = i + "      |" + square + "         |" + cube;
-//            System.out.println(row);
-//        }
 
-//        Convert given number grades into letter grades.
+        String option = "y";
+        do {
+            System.out.print("enter an integer: ");
+            int userInteger = scan.nextInt();
+            String header = "Number |" + "Squared   |" + "Cubed " + "\n"
+                        +   "-------|" + "----------|" + "------";
+            System.out.println(header);
+            int square = 0;
+            int cube = 0;
+            String row = "";
+            for (int i = 1; i <= userInteger; i = i + 1) {
+                square = i * i;
+                cube = i * i * i;
+
+                row = i + "      |" + square + "         |" + cube;
+                System.out.println(row);
+            }
+            System.out.print("Continue? (y/n): ");
+            option = scan.next();
+            System.out.println();
+        } while (option.equalsIgnoreCase("y"));
+
+//        ======================  Convert given number grades into letter grades.  ==================================
 //
 //        Prompt the user for a numerical grade from 0 to 100.
 //        Display the corresponding letter grade.
