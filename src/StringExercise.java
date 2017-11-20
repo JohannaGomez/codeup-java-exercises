@@ -114,9 +114,15 @@ public class StringExercise {
 //        String message = "We don't need no education \n";
 //        System.out.print(message + message.replace("education", "thought control"));
 
+        //Ryan's solution:
+//        String messageRyan = "We don't need no education \n";
+//        messageRyan += "We don't nee to thought control";
+//        System.out.println(messageRyan);
+
 //        Check "this" out!, "s inside of "s!
 //        String message = "check \"this\" out!, \" s inside of \" s";
 //        System.out.println(message);
+
 
 //        In windows, the main drive is usually C:\
 //        String message = "In windows, the main drive is usually C:\\";
@@ -124,8 +130,8 @@ public class StringExercise {
 
 //        I can do backslashes \, double backslashes \\,
 //        and the amazing triple backslash \\\!
-        String message = "I can do backslashes \\, double backslashes \\\\ \nand the amazing triple backslash \\\\\\";
-        System.out.println(message);
+//        String message = "I can do backslashes \\, double backslashes \\\\ \nand the amazing triple backslash \\\\\\";
+//        System.out.println(message);
 
 
 
