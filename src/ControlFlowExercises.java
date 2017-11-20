@@ -168,19 +168,19 @@ public class ControlFlowExercises {
 //        } while (option.equalsIgnoreCase("y"));
 
 //        Justin's solution:
-        System.out.print("enter an integer: ");
-        int userInter = scan.nextInt();
-        String header = "Number |" + "Squared   |" + "Cubed " + "\n"
-                +   "-------|" + "----------|" + "------";
-        System.out.println(header);
-        for (int i = 1; i <= userInter; i = i + 1) {
-            String output = "";
-            output += String.format("%-7d", i);
-            output += String.format("|%-10d", i * i);
-            output += String.format("|%d", i * i * i);
-            System.out.println(output);
-
-        }
+//        System.out.print("enter an integer: ");
+//        int userInter = scan.nextInt();
+//        String header = "Number |" + "Squared   |" + "Cubed " + "\n"
+//                +   "-------|" + "----------|" + "------";
+//        System.out.println(header);
+//        for (int i = 1; i <= userInter; i = i + 1) {
+//            String output = "";
+//            output += String.format("%-7d", i);
+//            output += String.format("|%-10d", i * i);
+//            output += String.format("|%d", i * i * i);
+//            System.out.println(output);
+//
+//        }
 //        ======================  Convert given number grades into letter grades.  ==================================
 //
 //        Prompt the user for a numerical grade from 0 to 100.
@@ -196,39 +196,39 @@ public class ControlFlowExercises {
 //        D : 66 - 60
 //        F : 59 - 0
 
-//        int yourNumericalGrade;
-//        String choice = "y";
-////
-//        do {
-//            do {
-//                // run the code inside the do body at least once
-//                System.out.print("enter your numerical grade than 0: ");
-//                yourNumericalGrade = scan.nextInt();
-//            } while (yourNumericalGrade <= 0);
+        int yourNumericalGrade;
+        String choice = "y";
 //
-//            if (yourNumericalGrade >= 88 && yourNumericalGrade <=100){
-//                System.out.println("your Grade is: A! Congratulations!");
-//            } else {
-//                if (yourNumericalGrade >= 80 && yourNumericalGrade <= 87) {
-//                    System.out.println("Your Grade is: B!");
-//                } else {
-//                    if (yourNumericalGrade >= 67 && yourNumericalGrade <= 79) {
-//                        System.out.println("Your Grade is: C!");
-//                    } else {
-//                        if (yourNumericalGrade >= 60 && yourNumericalGrade <= 66) {
-//                            System.out.println("Your Grade is: d!");
-//                        } else {
-//                            System.out.println("Your Grade is: F, look for another school");
-//                        }
-//                    }
-//                }
-//
-//            }
-//            System.out.print("Continue? (y/n): ");
-//            choice = scan.next();
-//            System.out.println();
-//
-//        } while (choice.equalsIgnoreCase("y"));
+        do {
+            do {
+                // run the code inside the do body at least once
+                System.out.print("enter your numerical grade than 0: ");
+                yourNumericalGrade = scan.nextInt();
+            } while (yourNumericalGrade <= 0);
+
+            if (yourNumericalGrade >= 88 && yourNumericalGrade <=100){
+                System.out.println("your Grade is: A! Congratulations!");
+            } else {
+                if (yourNumericalGrade >= 80 && yourNumericalGrade <= 87) {
+                    System.out.println("Your Grade is: B!");
+                } else {
+                    if (yourNumericalGrade >= 67 && yourNumericalGrade <= 79) {
+                        System.out.println("Your Grade is: C!");
+                    } else {
+                        if (yourNumericalGrade >= 60 && yourNumericalGrade <= 66) {
+                            System.out.println("Your Grade is: d!");
+                        } else {
+                            System.out.println("Your Grade is: F, look for another school");
+                        }
+                    }
+                }
+
+            }
+            System.out.print("Continue? (y/n): ");
+            choice = scan.next();
+            System.out.println();
+
+        } while (choice.equalsIgnoreCase("y"));
 
 
 
