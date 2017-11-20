@@ -60,6 +60,8 @@ public class ConsoleExercises {
                 System.out.printf("%f = %f x %f\n", area, length, width);
                 System.out.printf("%f = 2 x %f + 2 x %f\n", perimeter, length, width);
 
+
+
 //                System.out.println(area);
 //                System.out.println(perimeter);
 
