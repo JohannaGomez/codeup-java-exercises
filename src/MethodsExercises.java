@@ -69,7 +69,7 @@ public class MethodsExercises {
 
 
     // ============================================ Curriculum Exercises  ==========================================
-//    Basic Arithmetic
+//    1.-  =================== Basic Arithmetic
 //    Create four separate methods. Each will perform an arithmetic operation:
 //    -Addition
 //    -Substraction
@@ -81,9 +81,7 @@ public class MethodsExercises {
 //
 //    Food for thought: What happens if we try to divide by zero? What should happen?
 
-//    Bonus:
-//    Create your multiplication method without the * operator (Hint: a loop might be helpful).
-//    Do the above with recursion.
+
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -95,8 +93,18 @@ public class MethodsExercises {
         System.out.println("addition: " + addition(userInt1, userInt2));
         System.out.println("substraction: " + substraction(userInt1, userInt2));
         System.out.println("multiplication: " + multiplication(userInt1, userInt2));
+        System.out.println("multiplication without star: " + multiplicationWithOutStar(userInt1, userInt2));
         System.out.println("division: " + division(userInt1, userInt2));
         System.out.println("modules: " + modules(userInt1, userInt2));
+
+
+//        System.out.print("Enter a number between 1 and 10: ");
+//        int userInput = getInteger(1, 10);
+//        System.out.println("The user entered: " + userInput);
+
+        System.out.print("Enter a number between 1 and 10 to factor it: ");
+        int userInput = getInteger(1, 10);
+        System.out.println("The user entered: " + userInput);
 
     }
 
@@ -119,8 +127,24 @@ public class MethodsExercises {
         return multiplication;
     }
 
+    //    Bonus:
+//    Create your multiplication method without the * operator (Hint: a loop might be helpful).
+//    Do the above with recursion.
+
+    public static int multiplicationWithOutStar(int number1, int number2) {
+        int mult = 0;
+        for (int i = 1; i <= number2; i = i + 1) {
+            mult = mult + number1;
+        }
+        return mult;
+    }
+
+
     public static float division(float number1, float number2) {
         float division = number1 / number2;
+        if (number2 == 0) {
+            division = 0;
+        }
         return division;
     }
 
@@ -129,5 +153,62 @@ public class MethodsExercises {
         return modules;
     }
 
+
+
+
+//    2.- ===============   Create a method that validates that user input is in a certain range
+//    The method signature should look like this:
+
+
+//    public static int getInteger(int min, int max){
+//        int userInput;
+//        Scanner input = new Scanner(System.in);
+//        System.out.println();
+//
+//        System.out.println("Enter a number between 1 and 10: ");
+//        userInput = input.nextInt();
+//
+//        if (userInput <= max && userInput >= min){
+//            return userInput;
+//        } else {
+//            return getInteger(min, max);
+//        }
+//
+//    }
+
+//    3.- ======================Calculate the factorial of a number.
+//    Prompt the user to enter an integer from 1 to 10.
+//    Display the factorial of the number entered by the user.
+//    Ask if the user wants to continue.
+//    Use a for loop to calculate the factorial.
+//    Assume that the user will enter an integer, but verify it’s between 1 and 10.
+//    Use the long type to store the factorial.
+//    Continue only if the user agrees to.
+//    A factorial is a number multiplied by each of the numbers before it.
+//    Factorials are denoted by the exclamation point (n!). Ex:
+//            1! = 1               = 1
+//            2! = 1 x 2           = 2
+//            3! = 1 x 2 x 3       = 6
+//            4! = 1 x 2 x 3 x 4   = 24
+
+    public static long getInteger(int min, int max){
+        int userInput;
+        Scanner input = new Scanner(System.in);
+        System.out.println();
+
+        System.out.println("Enter a number between 1 and 10 to factor it : ");
+        userInput = input.nextInt();
+
+        if (userInput <= max && userInput >= min){
+            int fact = 1;
+            for (int i = 1; i <=userInput; i = i+1){
+                fact = fact * i;
+            }
+            return fact;
+        } else {
+            return getInteger(min, max);
+        }
+
+    }
 
 }
