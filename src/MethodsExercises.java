@@ -80,33 +80,55 @@ public class MethodsExercises {
 //    Add a modulus function that finds the modulus of two numbers.
 //
 //    Food for thought: What happens if we try to divide by zero? What should happen?
+//
+//    Bonus:
+//    Create your multiplication method without the * operator (Hint: a loop might be helpful).
+//    Do the above with recursion.
 
 
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("enter number 1");
-        int userInt1 = scan.nextInt();
-        System.out.println("enter number 2");
-        int userInt2 = scan.nextInt();
 
-        System.out.println("addition: " + addition(userInt1, userInt2));
-        System.out.println("substraction: " + substraction(userInt1, userInt2));
-        System.out.println("multiplication: " + multiplication(userInt1, userInt2));
-        System.out.println("multiplication without star: " + multiplicationWithOutStar(userInt1, userInt2));
-        System.out.println("division: " + division(userInt1, userInt2));
-        System.out.println("modules: " + modules(userInt1, userInt2));
+        // Basic arithmetic input and outputs:
+
+//        System.out.println("enter number 1");
+//        int userInt1 = scan.nextInt();
+//        System.out.println("enter number 2");
+//        int userInt2 = scan.nextInt();
+//
+//        System.out.println("addition: " + addition(userInt1, userInt2));
+//        System.out.println("substraction: " + substraction(userInt1, userInt2));
+//        System.out.println("multiplication: " + multiplication(userInt1, userInt2));
+//        System.out.println("multiplication without star: " + multiplicationWithOutStar(userInt1, userInt2));
+//        System.out.println("division: " + division(userInt1, userInt2));
+//        System.out.println("modules: " + modules(userInt1, userInt2));
 
 
-//        System.out.print("Enter a number between 1 and 10: ");
-//        int userInput = getInteger(1, 10);
-//        System.out.println("The user entered: " + userInput);
 
-        System.out.print("Enter a number between 1 and 10 to factor it: ");
-        int userInput = getInteger(1, 10);
-        System.out.println("The user entered: " + userInput);
+        String choice = "y";
+
+        do {
+            // Validating the input from user:
+            int userInput = getInteger(1, 10);
+            System.out.println("The user entered: " + userInput);
+
+            // Getting the factorial of the user number:
+            System.out.println("And the factorial is: " + factorial(userInput));
+
+            // Asking to continue or not:
+            System.out.print("Continue? (y/n): ");
+            choice = scan.next();
+            System.out.println();
+
+
+        } while (choice.equalsIgnoreCase("y"));
+
+
 
     }
+
+    // Methods:
 
     public static int addition(int number1, int number2) {
         int addition = number1 + number2;
@@ -127,10 +149,7 @@ public class MethodsExercises {
         return multiplication;
     }
 
-    //    Bonus:
-//    Create your multiplication method without the * operator (Hint: a loop might be helpful).
-//    Do the above with recursion.
-
+    // Bonus:
     public static int multiplicationWithOutStar(int number1, int number2) {
         int mult = 0;
         for (int i = 1; i <= number2; i = i + 1) {
@@ -160,21 +179,21 @@ public class MethodsExercises {
 //    The method signature should look like this:
 
 
-//    public static int getInteger(int min, int max){
-//        int userInput;
-//        Scanner input = new Scanner(System.in);
-//        System.out.println();
-//
-//        System.out.println("Enter a number between 1 and 10: ");
-//        userInput = input.nextInt();
-//
-//        if (userInput <= max && userInput >= min){
-//            return userInput;
-//        } else {
-//            return getInteger(min, max);
-//        }
-//
-//    }
+    public static int getInteger(int min, int max){
+        int userInput;
+        Scanner input = new Scanner(System.in);
+        System.out.println();
+
+        System.out.println("Enter a number between " + min + " and " + max + ": ");
+        userInput = input.nextInt();
+
+        if (userInput <= max && userInput >= min){
+            return userInput;
+        } else {
+            return getInteger(min, max);
+        }
+
+    }
 
 //    3.- ======================Calculate the factorial of a number.
 //    Prompt the user to enter an integer from 1 to 10.
@@ -191,24 +210,14 @@ public class MethodsExercises {
 //            3! = 1 x 2 x 3       = 6
 //            4! = 1 x 2 x 3 x 4   = 24
 
-    public static long getInteger(int min, int max){
-        int userInput;
-        Scanner input = new Scanner(System.in);
-        System.out.println();
 
-        System.out.println("Enter a number between 1 and 10 to factor it : ");
-        userInput = input.nextInt();
-
-        if (userInput <= max && userInput >= min){
-            int fact = 1;
-            for (int i = 1; i <=userInput; i = i+1){
-                fact = fact * i;
-            }
-            return fact;
-        } else {
-            return getInteger(min, max);
+    public static long factorial(long userInput) {
+        long factorial = 1;
+        for (int i = 1; i <=userInput; i = i+1){
+            factorial = factorial * i;
         }
-
+        return factorial;
     }
+
 
 }
