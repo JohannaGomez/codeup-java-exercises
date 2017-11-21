@@ -115,6 +115,10 @@ public class MethodsExercises {
 
             // Getting the factorial of the user number:
             System.out.println("And the factorial is: " + factorial(userInput));
+            long highestInteger = factorial(userInput);
+
+            long newRange = getInteger(1, highestInteger);
+            System.out.println("the new factorial es: " + factorial(newRange));
 
             // Asking to continue or not:
             System.out.print("Continue? (y/n): ");
@@ -179,7 +183,7 @@ public class MethodsExercises {
 //    The method signature should look like this:
 
 
-    public static int getInteger(int min, int max){
+    public static int getInteger(int min, long max){
         int userInput;
         Scanner input = new Scanner(System.in);
         System.out.println();
@@ -218,6 +222,15 @@ public class MethodsExercises {
         }
         return factorial;
     }
+
+//    Bonus
+//
+//    Test the application and find the integer for the highest factorial that can be accurately calculated
+//    by this application, then modify the prompt so that it prompts the user for a
+//    number "from 1 to {the highest integer that returns accurate factorial calculation}".
+//    Don’t forget to change your verification too!
+//    Use Recursion to implement the factorial.
+
 
 
 }
