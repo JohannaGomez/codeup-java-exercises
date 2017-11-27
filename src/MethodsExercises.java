@@ -106,33 +106,33 @@ public class MethodsExercises {
 
 
         // Get integer and factorial souts:
-//        String choice = "y";
-//
-//        do {
-//            // Validating the input from user:
-//            int userInput = getInteger(1, 10);
-//            System.out.println("The user entered: " + userInput);
-//
-//            // Getting the factorial of the user number:
+        String choice = "y";
+
+        do {
+            // Validating the input from user:
+            int userInput = getInteger(1, 10);
+            System.out.println("The user entered: " + userInput);
+
+            // Getting the factorial of the user number:
 //            System.out.println("And the factorial is: " + factorial(userInput));
-//
-////            long highestInteger = factorial(userInput);
-////            long newRange = getInteger(1, highestInteger);
-////            System.out.println("the new factorial es: " + factorial(newRange));
-//
-//            // Asking to continue or not:
-//            System.out.print("Continue? (y/n): ");
-//            choice = scan.next();
-//            System.out.println();
-//
-//
-//        } while (choice.equalsIgnoreCase("y"));
+
+//            long highestInteger = factorial(userInput);
+//            long newRange = getInteger(1, highestInteger);
+//            System.out.println("the new factorial es: " + factorial(newRange));
+
+            // Asking to continue or not:
+            System.out.print("Continue? (y/n): ");
+            choice = scan.next();
+            System.out.println();
+
+
+        } while (choice.equalsIgnoreCase("y"));
 
 
 
         // Roll dice souts:
-        System.out.print("enter the number of sides for a pair of dice:  ");
-        rollDice(getInteger(1,10), scan);
+//        System.out.print("enter the number of sides for a pair of dice:  ");
+//        rollDice(getInteger(1,10), scan);
 
     }
 
@@ -194,7 +194,7 @@ public class MethodsExercises {
         Scanner input = new Scanner(System.in);
         System.out.println();
 
-//        System.out.println("Enter a number between " + min + " and " + max + ": ");
+        System.out.println("Enter a number between " + min + " and " + max + ": ");
         userInput = input.nextInt();
 
         if (userInput <= max && userInput >= min){
@@ -204,6 +204,23 @@ public class MethodsExercises {
         }
 
     }
+
+//    Justin's solution:
+//    public static int getInteger(int min, int max) {
+//        Scanner sc = new Scanner(System.in);
+//        if (!sc.hasNextInt()) {
+//            System.out.println("Not a number!");
+//            return getInteger(min, max);
+//        }
+//        int userInput = sc.nextInt();
+//        if (userInput >= min && userInput <= max) {
+//            return userInput;
+//        } else {
+//            System.out.println("Number not in range!");
+//            return getInteger(min, max);
+//        }
+//    }
+
 
 //    3.- ======================Calculate the factorial of a number.
 //    Prompt the user to enter an integer from 1 to 10.

@@ -51,7 +51,6 @@ public class HighLow {
     public static void guessingNumber(int userInput) {
         int random = randomNumber(1, 100);
         int userNumber = 0;
-//        System.out.println("random" + random);
         do {
             userNumber = getIntegerforRandom(1, 100);
             if (userNumber < random) {
