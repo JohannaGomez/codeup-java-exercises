@@ -2,55 +2,66 @@
 
 public class Person {
 
-    //         ======================== slide 3 (classes and objects)
-    public String firstName;
-    public String lastName;
+    private String name;
 
+    // returns the person's name
+    public String getName() {
+        return this.name;
+    }
 
+    // changes the name property to the passed value
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    // prints a message to the console using the person's name
+    public void sayHello() {
+        System.out.println("hello " + this.name + " this is Johanna");
+    }
+
+    // Constructor:
+    public Person(String name){
+        this.name = name;
+    }
+
+}
+
+class PersonApp {
     public static void main(String[] args) {
-    //         ======================== slide 3 (classes and objects)
 
-        Person rick = new Person();
-        rick.firstName = "Rick";
-        rick.lastName = "Sanchez";
-        System.out.println(rick.firstName);
-        System.out.println(rick.lastName);
+        //1.- Object basis:
 
-        Person fred = new Person();
-        rick.firstName = "Fred";
-        rick.lastName = "Smith";
-        System.out.println(rick.firstName);
-        System.out.println(rick.lastName);
+//        Person person1 = new Person("Paola");
+//        System.out.println(person1.getName());
+//        person1.setName("mary");
+//        person1.sayHello();
 
-        // -- Dog Example --
-        // this is not going to work because I dont have a class Dog, but it is an example
-        // from the lecture:
+        // 2.- Understanding references:
+//        ==========
+//        Person person1 = new Person("John");
+//        Person person2 = new Person("John");
+        // This one prints out true because the value of both are equal:
+//        System.out.println(person1.getName().equals(person2.getName()));
 
-//        Dog d1 = new Dog();
-//        d1.age = 3;
-//        d1.breed = "corgi";
+        // This one prints out false because are different objects:
+//        System.out.println(person1 == person2);
 
+//        ============
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+        //This one prints out true because in line 50, the whole object person1 is assigned to person 2:
+//        System.out.println(person1 == person2);
 
-        // ======================== slide 4 (object fields)
-
-//        rick.sayHello();
-
-        // -- Dog Method Example --
-
-
-        // ======================== slide 5 (class fields)
-
-        //            System.out.println(Arithmetic.pi);
-        //            System.out.println(Arithmetic.add(5, 5));
-        //            System.out.println(Arithmetic.multiply(5, 5));
-
-        // -- DogHelper Example --
-
-
+//        ===========
+        Person person1 = new Person("John");
+        Person person2 = person1;
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
+        person2.setName("Jane");
+        //This one prints out "Jane" because in line 57, the objects are equal.  Prints "Jane" for person2 too:
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
 
 
     }
-
-
 }
