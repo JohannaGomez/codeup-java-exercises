@@ -105,32 +105,38 @@ public class MethodsExercises {
 //        System.out.println("modules: " + modules(userInt1, userInt2));
 
 
+        // Get integer and factorial souts:
+//        String choice = "y";
+//
+//        do {
+//            // Validating the input from user:
+//            int userInput = getInteger(1, 10);
+//            System.out.println("The user entered: " + userInput);
+//
+//            // Getting the factorial of the user number:
+//            System.out.println("And the factorial is: " + factorial(userInput));
+//
+////            long highestInteger = factorial(userInput);
+////            long newRange = getInteger(1, highestInteger);
+////            System.out.println("the new factorial es: " + factorial(newRange));
+//
+//            // Asking to continue or not:
+//            System.out.print("Continue? (y/n): ");
+//            choice = scan.next();
+//            System.out.println();
+//
+//
+//        } while (choice.equalsIgnoreCase("y"));
 
-        String choice = "y";
-
-        do {
-            // Validating the input from user:
-            int userInput = getInteger(1, 10);
-            System.out.println("The user entered: " + userInput);
-
-            // Getting the factorial of the user number:
-            System.out.println("And the factorial is: " + factorial(userInput));
-            long highestInteger = factorial(userInput);
-
-            long newRange = getInteger(1, highestInteger);
-            System.out.println("the new factorial es: " + factorial(newRange));
-
-            // Asking to continue or not:
-            System.out.print("Continue? (y/n): ");
-            choice = scan.next();
-            System.out.println();
 
 
-        } while (choice.equalsIgnoreCase("y"));
-
-
+        // Roll dice souts:
+        System.out.print("enter the number of sides for a pair of dice:  ");
+        rollDice(getInteger(1,10), scan);
 
     }
+
+
 
     // Methods:
 
@@ -188,7 +194,7 @@ public class MethodsExercises {
         Scanner input = new Scanner(System.in);
         System.out.println();
 
-        System.out.println("Enter a number between " + min + " and " + max + ": ");
+//        System.out.println("Enter a number between " + min + " and " + max + ": ");
         userInput = input.nextInt();
 
         if (userInput <= max && userInput >= min){
@@ -231,6 +237,25 @@ public class MethodsExercises {
 //    Don’t forget to change your verification too!
 //    Use Recursion to implement the factorial.
 
+    public static void rollDice(int sides, Scanner input){
+
+        while(true){
+            System.out.println("Type \"R\" to roll the dice please... ");
+            String userInput = input.nextLine();
+
+            if(userInput.equalsIgnoreCase("r")){
+                System.out.println("dices: " + RandomNumber(1, sides) + " " + RandomNumber(1, sides));
+            }else{
+                System.out.println("Not a valid option, exiting...");
+                break;
+            }
+        }
+
+    }
+
+    public static int RandomNumber(int min, int max){
+        return min + (int)(Math.random() * ((max - min) + 1));
+    }
 
 
 }
