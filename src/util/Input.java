@@ -30,7 +30,7 @@ public class Input {
 //    }
 
     public boolean yesNo(){
-        String userChoice = scanner.next();
+        String userChoice = this.scanner.next();
         if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")){
             return true;
         } else {
@@ -39,11 +39,6 @@ public class Input {
 
     }
 
-    // Justin's solution:
-//    public boolean yesNo(){
-//        String userChoice = scanner.next();
-//        return  userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")
-//    }
 
 
     public int getInt(){

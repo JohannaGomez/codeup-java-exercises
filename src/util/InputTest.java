@@ -17,9 +17,14 @@ public class InputTest {
         System.out.println("for the yesNo method, your answers was: " + input.yesNo());
 
 
-        // Justin's solution for yesNo:
-//        boolean userIsAwake = input.
 
+        // Ryan's solution for yesNo:
+        System.out.println("Please input yes or a no");
+        if(input.yesNo()) {
+            System.out.println("You input yes or 'y'");
+        } else {
+            System.out.println("You said anything other than yes.");
+        }
 
         // getInt Method without parameters:
         System.out.println("For the getInt method, enter an integer: ");

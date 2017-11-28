@@ -4,10 +4,19 @@ import java.util.Random;
 public class ServerNameGenerator {
 
 
-
-
     // Create two arrays whose elements are strings, one with at least 10 adjectives, another with at least 10 nouns.
-    public  String[] adjectives = {"pretty", "ugly", "smart", "thoughtful", "tall", "thin", "short", "small", "big", "beautiful"};
+    public  String[] adjectives = {
+            "pretty",
+            "ugly",
+            "smart",
+            "thoughtful",
+            "tall",
+            "thin",
+            "short",
+            "small",
+            "big",
+            "beautiful"};
+
     public  String[] nouns = {"mom", "dad", "son", "daughter", "aunt", "uncle", "grandma", "grandpa", "godmother", "godfather"};
 
 
@@ -15,6 +24,7 @@ public class ServerNameGenerator {
     // combination and display the generated name to the user.
     public static void main(String[] args) {
         ServerNameGenerator server = new ServerNameGenerator();
+        System.out.println("here is your server name:");
         System.out.println(server.getRandomString(server.adjectives) + " - " + server.getRandomString(server.nouns));
     }
 
