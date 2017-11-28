@@ -8,9 +8,14 @@ public class Input {
 //      the scanner property should be set to a new instance of the Scanner class.
 
     private Scanner scanner;
+    // Note:  scanner can be changed to sc or scan ....  the class Scanner with capital S, stays like that.
 
+
+    //  === Constructor:
     public Input(){
         scanner = new Scanner(System.in);
+        // or this.scnner = new Scanner(System.in)
+        // the new word is creating an object from the Scanner class
     }
 
 
@@ -61,9 +66,10 @@ public class Input {
         }
 
     }
-//
-//    public double getDouble() {
-//
-//    }
+
+    public double getDouble2() {
+        double userDouble = scanner.nextDouble();
+        return userDouble;
+    }
 
 }
