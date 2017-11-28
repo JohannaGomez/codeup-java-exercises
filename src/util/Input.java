@@ -24,6 +24,11 @@ public class Input {
         return userString;
     }
 
+    // Justin's solution:
+//    public String getString(){
+//         return scanner.nextLine();
+//    }
+
     public boolean yesNo(){
         String userChoice = scanner.next();
         if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")){
@@ -34,32 +39,50 @@ public class Input {
 
     }
 
-    public int getInt(int min, int max){
-        Scanner scanner = new Scanner(System.in);
-        if (!scanner.hasNextInt()) {
-            System.out.println("Not a number!");
-            return getInt(min, max);
+    // Justin's solution:
+//    public boolean yesNo(){
+//        String userChoice = scanner.next();
+//        return  userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")
+//    }
+
+
+    public int getInt(){
+        if (scanner.hasNextInt()) {
+            return scanner.nextInt();
+        } else {
+            System.out.println("not an integer!");
+            scanner.next();  // progresses the scanner
+            return getInt();
         }
-        int userInput = scanner.nextInt();
+    }
+
+    // Overloading:
+    public int getInt(int min, int max){
+        int userInput = getInt();
         if (userInput >= min && userInput <= max) {
             return userInput;
         } else {
             System.out.println("Number not in range!");
             return getInt(min, max);
         }
+    }
 
+
+    public double getDouble() {
+        if (scanner.hasNextDouble()) {
+            return scanner.nextDouble();
+        } else {
+            System.out.println("not a decimal!");
+            scanner.next();  // progresses the scanner
+            return getDouble();
+        }
     }
 
 
     public double getDouble(double min, double max){
-        Scanner scanner = new Scanner(System.in);
-        if (!scanner.hasNextDouble()) {
-            System.out.println("Not a number!");
-            return getDouble(min, max);
-        }
-        double userInputDouble = scanner.nextDouble();
-        if (userInputDouble >= min && userInputDouble <= max) {
-            return userInputDouble;
+        double userInput = getDouble();
+        if (userInput >= min && userInput <= max) {
+            return userInput;
         } else {
             System.out.println("Number not in range!");
             return getDouble(min, max);
@@ -67,9 +90,5 @@ public class Input {
 
     }
 
-    public double getDouble2() {
-        double userDouble = scanner.nextDouble();
-        return userDouble;
-    }
 
 }
