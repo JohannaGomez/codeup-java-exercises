@@ -12,4 +12,18 @@ public class Square extends Rectangle {
         super(side, side);
         this.side = side;
     }
+
+//    In the Square class, override the getArea and getPerimeter methods with the following definitions for a square
+
+//    perimeter = 4 x side
+//    area = side ^ 2
+
+    public double getArea() {
+        return side * side;
+    }
+
+    public double getPerimeter() {
+        return 4 * side;
+    }
+
 }
