@@ -1,6 +1,7 @@
 package movies;
 import util.Input;
 
+
 public class MoviesApplication {
     public static void main(String[] args) {
 
@@ -19,70 +20,66 @@ public class MoviesApplication {
         System.out.println("Enter your choice: ");
 
 
-//        String choice = "y";
-
-//        do {
-//            // Validating the input from user:
-//            int userInput = getInteger(1, 10);
-//            System.out.println("The user entered: " + userInput);
-//
-//            // Getting the factorial of the user number:
-////            System.out.println("And the factorial is: " + factorial(userInput));
-//
-////            long highestInteger = factorial(userInput);
-////            long newRange = getInteger(1, highestInteger);
-////            System.out.println("the new factorial es: " + factorial(newRange));
-//
-//            // Asking to continue or not:
-//            System.out.print("Continue? (y/n): ");
-//            choice = scan.next();
-//            System.out.println();
-//
-//
-//        } while (choice.equalsIgnoreCase("y"));
-
 
         Input input = new Input();
-        do {
 
-        } while (input.yesNo());
         int userMovieOption = input.getInt(0,5);
 
-        if (userMovieOption == 1){
-            for (int i = 0; i < movies.length; i++) {
+
+        for (int i = 0; i < movies.length; i++) {
+            if (userMovieOption == 1) {
                 System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
-            }
-        } else if (userMovieOption == 2) {
-            for (int i = 0; i < movies.length; i++) {
-                if (movies[i].getCategory().equalsIgnoreCase("animated")){
-                    System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
-                }
-            }
-
-        } else if (userMovieOption == 3) {
-            for (int i = 0; i < movies.length; i++) {
-                if (movies[i].getCategory().equalsIgnoreCase("drama")){
-                    System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
-                }
+            } else if (userMovieOption == 2 && movies[i].getCategory().equalsIgnoreCase("animated")) {
+                System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
+            } else if (userMovieOption == 3 && movies[i].getCategory().equalsIgnoreCase("drama")) {
+                System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
+            } else if (userMovieOption == 4 && movies[i].getCategory().equalsIgnoreCase("horror")) {
+                System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
+            } else if (userMovieOption == 5 && movies[i].getCategory().equalsIgnoreCase("scifi")) {
+                System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
+            } else if (userMovieOption == 0){
+                System.out.println("you exited the movies application!!!");
             }
 
-        } else if (userMovieOption == 4) {
-            for (int i = 0; i < movies.length; i++) {
-                if (movies[i].getCategory().equalsIgnoreCase("horror")){
-                    System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
-                }
-            }
-
-        } else if (userMovieOption == 5) {
-            for (int i = 0; i < movies.length; i++) {
-                if (movies[i].getCategory().equalsIgnoreCase("scifi")){
-                    System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
-                }
-            }
-
-        } else {
-            System.out.println("you exited the movies application!!!");
         }
+
+
+
+//        if (userMovieOption == 1){
+//            for (int i = 0; i < movies.length; i++) {
+//                System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
+//            }
+//        } else if (userMovieOption == 2) {
+//            for (int i = 0; i < movies.length; i++) {
+//                if (movies[i].getCategory().equalsIgnoreCase("animated")){
+//                    System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
+//                }
+//            }
+//
+//        } else if (userMovieOption == 3) {
+//            for (int i = 0; i < movies.length; i++) {
+//                if (movies[i].getCategory().equalsIgnoreCase("drama")){
+//                    System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
+//                }
+//            }
+//
+//        } else if (userMovieOption == 4) {
+//            for (int i = 0; i < movies.length; i++) {
+//                if (movies[i].getCategory().equalsIgnoreCase("horror")){
+//                    System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
+//                }
+//            }
+//
+//        } else if (userMovieOption == 5) {
+//            for (int i = 0; i < movies.length; i++) {
+//                if (movies[i].getCategory().equalsIgnoreCase("scifi")){
+//                    System.out.println(movies[i].getName() + "--" + movies[i].getCategory());
+//                }
+//            }
+//
+//        } else {
+//            System.out.println("you exited the movies application!!!");
+//        }
 
 
 
