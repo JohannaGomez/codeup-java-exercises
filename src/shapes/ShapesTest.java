@@ -18,6 +18,7 @@ public class ShapesTest {
 //  verify that the getPerimeter and getArea methods return 20 and 25, respectively.
 //  In the Square class, override the getArea and getPerimeter methods with the following definitions for a square.
 
+        // This is polymorphism, Rectangle is the parent type which is assigned to the new object Square named box2
         Rectangle box2 = new Square(5);
         System.out.println("this is the perimeter for box2: " + box2.getPerimeter());
         System.out.println("this is the area for box2: " + box2.getArea());
