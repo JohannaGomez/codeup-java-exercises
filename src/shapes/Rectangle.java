@@ -35,14 +35,21 @@ package shapes;
 //}
 
     // =================================  Interfaces and abstract Exercises ===========================================
-//    Change your existing Rectangle class to inherit from Quadrilateral and implement Measurable.
+//    5.- Change your existing Rectangle class to inherit from Quadrilateral and implement Measurable.
 //    IntelliJ can automatically create the skeleton of all the methods that need to be implemented.
 
 public class Rectangle extends Quadrilateral implements Measurable {
 
+//    public Rectangle(int length, int width) {
+//        this.length = length;
+//        this.width = width;
+//    }
+
+
+    // Ryan's solution:  In Quadrilateral, left just the constructor with parameters and deleted the empty one, so  I
+    // won't need the Rectangle constructor I wrote in line 43, I will need the one with super class of the parent:
     public Rectangle(int length, int width) {
-        this.length = length;
-        this.width = width;
+        super(length, width);
     }
 
     @Override

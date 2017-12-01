@@ -30,7 +30,7 @@ public class ShapesTest {
 //        Modify your ShapesTest class, use it to:
 //
 //        declare a variable of the type Measurable named myShape.
-//                display the shape's area and circumference   ??????????????????
+//                display the shape's area and perimeter   ??????????????????
 //        Test your code by creating instances of both Square and Rectangle and assigning them to myShape.
 
         Measurable myShape;

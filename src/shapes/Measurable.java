@@ -1,9 +1,10 @@
 package shapes;
 
 public interface Measurable {
+    // Any class that uses this interface, is going to implement the methods listed here:
 
-    double getPerimeter();
-    double getArea();
+    public double getPerimeter();
+    public double getArea();
 
 
 }
