@@ -17,10 +17,10 @@ public class Student {
     // 2.- The student class should have a constructor that sets name property,
     // and initializes the grades property as an empty list.
 
-    // Note:  I tried to pass in the array too, but I noticed I couldnt instantiate the object.
+    // Note:  I tried to pass in the array too, but I noticed I couldn't instantiate the object.
     public Student(String name) {
         this.name = name;
-        this.grades = grades;
+        this.grades = new ArrayList<>();
     }
 
     // 3.-  Methods:
@@ -55,24 +55,22 @@ public class Student {
         Student joha = new Student("Johanna");
         Student rj = new Student("Roy");
 
-//        System.out.println(pao.getName());
 
-
-//        ArrayList<Integer> grades = new ArrayList<>();
         pao.addGrade(100);
         pao.addGrade(98);
         pao.addGrade(78);
-//        System.out.println(pao.grades);
+        System.out.println("for the student: " + pao.getName() + " the average grade is: " + pao.getGradeAverage());
 
 
         joha.addGrade(100);
         joha.addGrade(98);
         joha.addGrade(78);
-
+        System.out.println("for the student: " + joha.getName() + " the average grade is: " + joha.getGradeAverage());
 
         rj.addGrade(100);
         rj.addGrade(98);
         rj.addGrade(78);
+        System.out.println("for the student: " + rj.getName() + " the average grade is: " + rj.getGradeAverage());
 
     }
 
