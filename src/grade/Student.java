@@ -60,6 +60,7 @@ public class Student {
         pao.addGrade(100);
         pao.addGrade(98);
         pao.addGrade(78);
+//        System.out.println(pao.grades);
         System.out.println("for the student: " + pao.getName() + " the average grade is: " + pao.getGradeAverage());
 
 
