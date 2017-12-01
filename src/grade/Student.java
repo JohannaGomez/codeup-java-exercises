@@ -52,13 +52,28 @@ public class Student {
         // correctly returns the average of the student's grades.
 
         Student pao = new Student("Paola");
+        Student joha = new Student("Johanna");
+        Student rj = new Student("Roy");
+
 //        System.out.println(pao.getName());
-        ArrayList<Integer> grades = new ArrayList<>();
-        pao.grades.add(100);
-        pao.grades.add(98);
-//        pao.addGrade(98);
-//        pao.addGrade(78);
-        System.out.println(pao.grades);
+
+
+//        ArrayList<Integer> grades = new ArrayList<>();
+        pao.addGrade(100);
+        pao.addGrade(98);
+        pao.addGrade(78);
+//        System.out.println(pao.grades);
+
+
+        joha.addGrade(100);
+        joha.addGrade(98);
+        joha.addGrade(78);
+
+
+        rj.addGrade(100);
+        rj.addGrade(98);
+        rj.addGrade(78);
+
     }
 
 }
