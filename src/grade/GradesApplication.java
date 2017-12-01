@@ -69,7 +69,7 @@ public class GradesApplication {
 
 
         do {
-
+            System.out.println("");
             System.out.println("\nWho do you want to get information about?\n");
             userInput = input.getString();
 
