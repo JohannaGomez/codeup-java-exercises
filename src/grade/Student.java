@@ -38,6 +38,7 @@ public class Student {
     // returns the average of the students grades
     public double getGradeAverage(){
         int sumOfGrades = 0;
+        // for(DatatypeOfEachElementInTheArray variableNameWeCallEachElement : variableNameThatsTheArray)
         for (Integer grade: grades) {
             sumOfGrades = sumOfGrades + grade;
         }
