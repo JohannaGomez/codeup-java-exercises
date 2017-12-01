@@ -30,6 +30,10 @@ public class Student {
 
     };
 
+    public ArrayList<Integer> getGrades() {
+        return grades;
+    }
+
     // adds the given grade to the grades property
     public void addGrade(int grade){
         grades.add(grade);

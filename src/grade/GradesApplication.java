@@ -67,23 +67,6 @@ public class GradesApplication {
         System.out.println("Here are the github usernames of our students:\n");
         showKeys(students);
 
-
-        do {
-            System.out.println("");
-            System.out.println("\nWho do you want to get information about?\n");
-            userInput = input.getString();
-
-            if(students.containsKey(userInput)) {
-                Student student = students.get(userInput);
-                System.out.println(student.getName() + " has an average grade of :  " + student.getGradeAverage());
-
-            } else {
-                System.out.println("No student w/ that username");
-            }
-            System.out.println("would you like to continue student? [y/n]");
-
-        } while(input.yesNo());
-
 //        do {
 //            showKeys(students);
 //            System.out.println("\n");
@@ -106,10 +89,30 @@ public class GradesApplication {
 //
 //        } while (userInput.equalsIgnoreCase("nicholekirlim") || userInput.equalsIgnoreCase("abbyperez") || userInput.equalsIgnoreCase("lukesaav") || userInput.equalsIgnoreCase("JohannaGomez"));
 
+        // Refactoring my code with Ryan's help:
+        do {
+            System.out.println("");
+            System.out.println("\nWho do you want to get information about?\n");
+            userInput = input.getString();
+
+            if(students.containsKey(userInput)) {
+                Student student = students.get(userInput);
+                System.out.println("Name: " + student.getName() + " Github username: " + userInput );
+                System.out.println(student.getGrades());
+                System.out.println("Current average:  " + student.getGradeAverage());
+
+            } else {
+                System.out.println("Sorry, no student found with the gihub username of : " + userInput);
+
+            }
+            System.out.println("Would you like to see another student? [y/n]");
+
+        } while(input.yesNo());
 
 
     }
 
+    // Method to show the keys:
     public static void showKeys (HashMap<String, Student> students) {
         // for(DatatypeOfEachElementInTheArray   variableNameWeCallEachElement   : variableNameThatsTheArray)
         for (String key : students.keySet() ) {
