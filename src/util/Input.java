@@ -40,18 +40,30 @@ public class Input {
     }
 
 
+    // Getting an Integer:
+//    public int getInt(){
+//        if (scanner.hasNextInt()) {
+//            return scanner.nextInt();
+//        } else {
+//            System.out.println("not an integer!");
+//            scanner.next();  // progresses the scanner
+//            return getInt();
+//        }
+//    }
 
+    //Exceptions and Errors:
     public int getInt(){
-        if (scanner.hasNextInt()) {
-            return scanner.nextInt();
-        } else {
-            System.out.println("not an integer!");
-            scanner.next();  // progresses the scanner
+        try {
+            int input = Integer.valueOf(getString());
+            return input;
+        } catch (NumberFormatException e) {
+            System.out.println(e.getMessage());
+            System.out.println("That's not an integer! Try again!");
             return getInt();
         }
     }
 
-    // Overloading:
+    // Overloading getInt:
     public int getInt(int min, int max){
         int userInput = getInt();
         if (userInput >= min && userInput <= max) {
@@ -62,18 +74,31 @@ public class Input {
         }
     }
 
+    // Getting doubles:
+//    public double getDouble() {
+//        if (scanner.hasNextDouble()) {
+//            return scanner.nextDouble();
+//        } else {
+//            System.out.println("not a decimal!");
+//            scanner.next();  // progresses the scanner
+//            return getDouble();
+//        }
+//    }
 
+    //Exceptions and Errors:
     public double getDouble() {
-        if (scanner.hasNextDouble()) {
-            return scanner.nextDouble();
-        } else {
-            System.out.println("not a decimal!");
-            scanner.next();  // progresses the scanner
+        try {
+            double input = Double.valueOf(getString());
+            return input;
+        } catch (NumberFormatException e) {
+            System.out.println(e.getMessage());
+            System.out.println("That's not an integer! Try again!");
             return getDouble();
         }
     }
 
 
+    // Overloading getDouble:
     public double getDouble(double min, double max){
         double userInput = getDouble();
         if (userInput >= min && userInput <= max) {
@@ -84,6 +109,16 @@ public class Input {
         }
 
     }
+
+
+//    Your getInt and getDouble methods should make sure that the value returned from the method is actually an int or a double.
+//    Do this by using the following methods:
+//    Integer.valueOf(String s);
+//    Double.valueOf(String s);
+//    Note these methods will throw a NumberFormatException if the given input cannot be parsed as
+//    an integer or double. Your methods on the input class should handle these exceptions.
+
+
 
 
 }
