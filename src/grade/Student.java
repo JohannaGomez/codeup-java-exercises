@@ -16,11 +16,14 @@ public class Student {
 
     // 2.- The student class should have a constructor that sets name property,
     // and initializes the grades property as an empty list.
+    // ===========The constructor creates an instance for the class.======= it runs when we compile the code and in
+    // the main
 
     // Note:  I tried to pass in the array too, but I noticed I couldn't instantiate the object.
     public Student(String name) {
         this.name = name;
-        this.grades = new ArrayList<>();
+        //initializing:
+        grades = new ArrayList<>();
     }
 
     // 3.-  Methods:
@@ -43,7 +46,7 @@ public class Student {
     public double getGradeAverage(){
         int sumOfGrades = 0;
         // for(DatatypeOfEachElementInTheArray variableNameWeCallEachElement : variableNameThatsTheArray)
-        for (Integer grade: grades) {
+        for (Integer     grade: grades) {
             sumOfGrades = sumOfGrades + grade;
         }
         return sumOfGrades / grades.size();

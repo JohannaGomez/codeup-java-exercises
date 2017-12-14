@@ -91,11 +91,11 @@ public class GradesApplication {
 
         // Refactoring my code with Ryan's help:
         do {
-            System.out.println("");
+            System.out.println();
             System.out.println("\nWho do you want to get information about?\n");
             userInput = input.getString();
 
-            if(students.containsKey(userInput)) {
+            if(students.containsKey(userInput)) {  // returns a boolean
                 Student student = students.get(userInput);
                 System.out.println("Name: " + student.getName() + " Github username: " + userInput );
                 System.out.println(student.getGrades());
@@ -120,6 +120,36 @@ public class GradesApplication {
         }
     }
 
+
+    // Ryan's solution to leave the main clear.
+//    public static HashMap<String, Student> addStudents(){
+//        HashMap<String, Student> students = new HashMap<>();
+//        Student pao = new Student("Paola");
+//        pao.addGrade(100);
+//        pao.addGrade(98);
+//        pao.addGrade(78);
+//
+//        Student abby = new Student("Abby");
+//        abby.addGrade(98);
+//        abby.addGrade(97);
+//        abby.addGrade(100);
+//
+//        Student nichole = new Student("Nichole");
+//        nichole.addGrade(100);
+//        nichole.addGrade(90);
+//        nichole.addGrade(80);
+//
+//        Student luke = new Student("Luke");
+//        luke.addGrade(98);
+//        luke.addGrade(78);
+//        luke.addGrade(90);
+//
+//
+//        students.put("JohannaGomez", pao);
+//        students.put("abbyperez", abby);
+//        students.put("nicholekirlim", nichole);
+//        students.put("lukesaav", luke);
+//    }
 
 
 
