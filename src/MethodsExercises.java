@@ -92,8 +92,10 @@ public class MethodsExercises {
 
         // Basic arithmetic input and outputs:
 
-//        System.out.println("enter number 1");
-//        int userInt1 = scan.nextInt();
+        System.out.println("enter number 1");
+        int userInt1 = scan.nextInt();
+        System.out.println("the sum of the divisors of: " + userInt1 + "is " + sumOfDiv(userInt1));
+
 //        System.out.println("enter number 2");
 //        int userInt2 = scan.nextInt();
 //
@@ -106,27 +108,27 @@ public class MethodsExercises {
 
 
         // Get integer and factorial souts:
-        String choice = "y";
-
-        do {
-            // Validating the input from user:
-            int userInput = getInteger(1, 10);
-            System.out.println("The user entered: " + userInput);
-
-            // Getting the factorial of the user number:
-//            System.out.println("And the factorial is: " + factorial(userInput));
-
-//            long highestInteger = factorial(userInput);
-//            long newRange = getInteger(1, highestInteger);
-//            System.out.println("the new factorial es: " + factorial(newRange));
-
-            // Asking to continue or not:
-            System.out.print("Continue? (y/n): ");
-            choice = scan.next();
-            System.out.println();
-
-
-        } while (choice.equalsIgnoreCase("y"));
+//        String choice = "y";
+//
+//        do {
+//            // Validating the input from user:
+//            int userInput = getInteger(1, 10);
+//            System.out.println("The user entered: " + userInput);
+//
+//            // Getting the factorial of the user number:
+////            System.out.println("And the factorial is: " + factorial(userInput));
+//
+////            long highestInteger = factorial(userInput);
+////            long newRange = getInteger(1, highestInteger);
+////            System.out.println("the new factorial es: " + factorial(newRange));
+//
+//            // Asking to continue or not:
+//            System.out.print("Continue? (y/n): ");
+//            choice = scan.next();
+//            System.out.println();
+//
+//
+//        } while (choice.equalsIgnoreCase("y"));
 
 
 
@@ -272,6 +274,18 @@ public class MethodsExercises {
 
     public static int RandomNumber(int min, int max){
         return min + (int)(Math.random() * ((max - min) + 1));
+    }
+
+    public static int sumOfDiv (int n) {
+        int limit = n;
+        int totalSumofDiv = 0;
+        for (int i = 1; i <= n; i = i+1) {
+            if (n % i ==0) {
+                totalSumofDiv = totalSumofDiv + i;
+            }
+        }
+        return totalSumofDiv;
+
     }
 
 
