@@ -48,21 +48,42 @@ public class InterviewPractice {
 
         // Fibonacci:
         // Scanner user input:
-        int userInput;
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Input a number: ");
-        userInput = scan.nextInt();
-        System.out.println("you entered" + " " + userInput);
-        System.out.println("Fibonacci effect:");
-        int n1 = 0, n2 = 1, i, n3;
-        System.out.print(n1 + " " + n2);
-        for(i = 1; i <= userInput; i = i + 1) {
-            n3 = n1 + n2;
-            System.out.print(" " + n3);
-            n1 = n2;
-            n2 = n3;
+//        int userInput;
+//        Scanner scan = new Scanner(System.in);
+//        System.out.println("Input a number: ");
+//        userInput = scan.nextInt();
+//        System.out.println("you entered" + " " + userInput);
+//        System.out.println("Fibonacci effect:");
+//        int n1 = 0, n2 = 1, i, n3;
+//        System.out.print(n1 + " " + n2);
+//        for(i = 1; i <= userInput; i = i + 1) {
+//            n3 = n1 + n2;
+//            System.out.print(" " + n3);
+//            n1 = n2;
+//            n2 = n3;
+//        }
+
+        // Get the minimum coins combination:
+        int [] values = {1,3,5};
+        System.out.println(getMinCoins(values, 7));
+
+
+    }
+
+
+    public static int getMinCoins (int[] values, int sum) {
+        if (sum ==0) {
+            return 0;
         }
 
+        int min = Integer.MAX_VALUE;
+
+        for (int i = 0; i < values.length; i = i+1) {
+            if (sum >= values[i]) {
+                min = Math.min(min, getMinCoins(values, sum - values[i]));
+            }
+        }
+        return min + 1;
 
     }
 }
